@@ -38,9 +38,28 @@ body {
    flex-direction: column;
    align-content: center;
    justify-content: flex-start;
-   
+
 }
 
+.nav-title {
+  color: #E9E9F3;
+ }
+
+.nav-filter-title {
+  color: #BFBFDD;
+ }
+
+.nav-button {
+  color: #E9E9F3;
+  background-color: #5356A4
+ }
+
+ .nav-title,
+ .nav-filter-title,
+ .nav-button {
+   padding-top: 20px;
+   padding-bottom: 20px;
+ }
 
 .upper-body {
     background-color: #a9aad2;
