@@ -1,9 +1,8 @@
 * {
-    /* height: 100%;
-    width: 100%; */
     font-size: 16px;
     margin: 0 0 0 0;
     padding: 0;
+    font-family: Open Sans;
 }
 
 body {
@@ -28,7 +27,7 @@ body {
 .navbar {
    background-color: #1f1f3d;
    height: 100%;
-   width: 160px;
+   width: 250px;
    position: fixed;
    z-index: 1;
    top: 0;
@@ -43,22 +42,28 @@ body {
 
 .nav-title {
   color: #E9E9F3;
+  font-size: 20px;
  }
 
 .nav-filter-title {
   color: #BFBFDD;
+  font-size: 14px;
  }
 
 .nav-button {
   color: #E9E9F3;
-  background-color: #5356A4
+  background-color: #5356A4;
+  height: 45px;
+  width: 215px;
+  margin: 20px;
+  box-sizing: border-box;
  }
 
  .nav-title,
- .nav-filter-title,
- .nav-button {
+ .nav-filter-title {
    padding-top: 20px;
    padding-bottom: 20px;
+   padding-left: 20px;
  }
 
 .upper-body {
