@@ -8,13 +8,14 @@
   <title>Idea Box</title>
 </head>
   <body>
-    <nav class="navbar">
-      <h2 class="nav-title">IdeaBox</h2>
+    <div id="wrapper">
+    <section class="side-bar">
+      <h2 class="side-title">IdeaBox</h2>
       <hr>
-      <h5 class="nav-filter-title">Filter Starred Ideas</h5>
-      <button class="nav-button" type="button">Show Starred Ideas</button>
+      <h5 class="side-filter-title">Filter Starred Ideas</h5>
+      <button class="side-button" type="button">Show Starred Ideas</button>
       <hr>
-    </nav>
+    </section>
     <main class="main">
       <section class="upper-body">
           <form>
@@ -22,7 +23,7 @@
             <input>
             <label>Body</label>
             <textarea></textarea>
-            <button type="button">Save</button>
+            <button class="save-button" type="button">Save</button>
             <input type="search">
           </form>
       </section>
@@ -59,6 +60,7 @@
               <div class="card-footer"></div>
             </div>
         </article>
-    </main>
+      </main>
+    </div>
   </body>
 </html>
