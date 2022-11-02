@@ -1,8 +1,9 @@
+
 * {
     font-size: 16px;
     margin: 0 0 0 0;
     padding: 0;
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
 }
 
 body {
@@ -131,10 +132,11 @@ textarea {
     align-self: center;
     border-radius: 2px;
     font-size: large;
+    border: none;
 }
 
 .search-icon {
-    height: 3vh;
+    height: 3.5vh;
     width: 3vw;
     align-self: center;
     background-color: #1f1f3d;
