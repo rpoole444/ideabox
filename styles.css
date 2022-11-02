@@ -1,0 +1,150 @@
+* {
+    font-size: 16px;
+    margin: 0 0 0 0;
+    padding: 0;
+    font-family: 'Open Sans';
+}
+
+body {
+    overflow-wrap: break-word;
+    inline-size: 30vw ;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+
+}
+
+.main{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: flex-start;
+}
+
+.side-bar {
+   background-color: #1f1f3d;
+   height: 100vh;
+   width: 30vw;
+   display: flex;
+   flex-direction: column;
+   align-self: flex-start;
+
+
+}
+
+.side-title {
+  color: #E9E9F3;
+  font-size: 20px;
+ }
+
+.side-filter-title {
+  color: #BFBFDD;
+  font-size: 14px;
+ }
+
+.side-button {
+  color: #E9E9F3;
+  background-color: #5356A4;
+  height: 45px;
+  width: 215px;
+  margin: 20px;
+  box-sizing: border-box;
+  align-self: center;
+ }
+
+ .side-title,
+ .side-filter-title {
+   padding-top: 20px;
+   padding-bottom: 20px;
+   padding-left: 20px;
+ }
+
+.upper-body {
+    background-color: #a9aad2;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.lower-body {
+    background-color: #eaeaf4;
+    height: 50%;
+    width: 100%;
+    display: flex;
+}
+
+#wrapper {
+    display:flex;
+    min-height: 100%;
+}
+
+form {
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+input, 
+textarea {
+    width: 30vw;
+    margin-bottom: 10px;
+    height:5vh;
+ 
+
+}
+
+input,
+textarea,
+.save-button,
+#search-container {
+    border-radius: 3px;
+    border: 1px solid;
+}
+
+textarea {
+   height: 15vh;
+   resize: none;
+   box-sizing: border-box;
+   ;
+}
+
+.title-label,
+.body-label {
+   margin-bottom: 10px;
+}
+
+.save-button {
+    background-color: #1f1f3d;
+    color: #E9E9f3;
+    width: 30vw;
+    height: 5vh;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    align-self: center;
+    border-radius: 2px;
+    font-size: large;
+}
+
+.search-icon {
+    height: 3vh;
+    width: 3vw;
+    align-self: center;
+    background-color: #1f1f3d;
+    padding: 8px;
+    border-radius: 2px;
+}
+
+#search-container {
+    display: flex;
+    width: 30vw;
+    height: 5vh;
+    flex-direction: row-reverse;
+}
