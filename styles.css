@@ -131,6 +131,7 @@ textarea {
     font-size: large;
 }
 
-.search-bar {
-    
+.search-icon {
+    height: 6vh;
+    width: 6vw;
 }
