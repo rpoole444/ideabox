@@ -97,21 +97,18 @@ textarea {
     width: 30vw;
     margin-bottom: 10px;
     height:5vh;
-    border-color: #1f1f3d;
+ 
 
 }
 
 input,
 textarea,
-.save-button{
-    border-color: #1f1f3d;
+.save-button {
     border-radius: 3px;
 }
 
-
 textarea {
    height: 15vh;
-   border-color: 5px #1f1f3d;
    resize: none;
    box-sizing: border-box;
    ;
@@ -130,7 +127,10 @@ textarea {
     margin-top: 5px;
     margin-bottom: 20px;
     align-self: center;
-    border-color: 5px #1f1f3d;
-    border-radius: 3px;
+    border-radius: 2px;
     font-size: large;
+}
+
+.search-bar {
+    
 }
