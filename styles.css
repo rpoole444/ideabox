@@ -2,17 +2,19 @@
     font-size: 16px;
     margin: 0 0 0 0;
     padding: 0;
-    font-family: Open Sans;
+    font-family: 'Open Sans';
 }
 
 body {
-  
+    overflow-wrap: break-word;
+    inline-size: 30vw ;
 }
 
 html,
 body {
     height: 100%;
-    width: 100%
+    width: 100%;
+
 }
 
 .main{
@@ -95,7 +97,24 @@ textarea {
     width: 30vw;
     margin-bottom: 10px;
     height:5vh;
-    border: #1f1f3d;
+    border-color: #1f1f3d;
+
+}
+
+input,
+textarea,
+.save-button{
+    border-color: #1f1f3d;
+    border-radius: 3px;
+}
+
+
+textarea {
+   height: 15vh;
+   border-color: 5px #1f1f3d;
+   resize: none;
+   box-sizing: border-box;
+   ;
 }
 
 .title-label,
@@ -111,5 +130,7 @@ textarea {
     margin-top: 5px;
     margin-bottom: 20px;
     align-self: center;
-    border: 2px #1f1f3d;
+    border-color: 5px #1f1f3d;
+    border-radius: 3px;
+    font-size: large;
 }
