@@ -34,8 +34,6 @@ body {
    display: flex;
    flex-direction: column;
    align-self: flex-start;
-
-
 }
 
 .side-title {
@@ -168,5 +166,31 @@ article {
     height: 25vh;
     width: 20vw;
     border: 8px solid green;
-
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+.card-header,
+.card-footer {
+    display: flex;
+    width: 20vw;
+    height: 50px;
+    background-color: burlywood;
+}
+
+.card-header {
+    justify-content: space-between;
+}
+
+.card-footer {
+    align-items: center;
+}
+
+.red-star,
+.white-x-icon,
+.comment-icon {
+    height: 4vh;
+    width: 3vw;
+}
+
++
