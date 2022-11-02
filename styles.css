@@ -67,7 +67,7 @@ body {
 
 .upper-body {
     background-color: #a9aad2;
-    height: 50%;
+    height: 40%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -75,7 +75,7 @@ body {
 
 .lower-body {
     background-color: #eaeaf4;
-    height: 50%;
+    height: 60%;
     width: 100%;
     display: flex;
 }
@@ -97,7 +97,7 @@ input,
 textarea {
     width: 30vw;
     margin-bottom: 10px;
-    height:5vh;
+    height: 5vh;
  
 
 }
@@ -111,7 +111,7 @@ textarea,
 }
 
 textarea {
-   height: 15vh;
+   height: 10vh;
    resize: none;
    box-sizing: border-box;
    ;
@@ -136,7 +136,7 @@ textarea {
 }
 
 .search-icon {
-    height: 3.5vh;
+    height: 4vh;
     width: 3vw;
     align-self: center;
     background-color: #1f1f3d;
@@ -149,4 +149,24 @@ textarea {
     width: 30vw;
     height: 5vh;
     flex-direction: row-reverse;
+    margin-bottom: 12px;
+}
+
+article {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 40px;
+}
+
+.card-container {
+    display: flex;
+    height: 25vh;
+    width: 20vw;
+    border: 8px solid green;
+
 }
