@@ -46,9 +46,7 @@ body {
 
 .side-title,
 .side-filter-title {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 14px;
+  padding: 20px 0px 20px 14px;
 }
 
 .side-button {
@@ -61,8 +59,7 @@ body {
   font-weight: 525;
   margin-bottom: 53px;
   margin-top: 34px;
-  padding-right: 30px;
-  padding-left: 20px;
+  padding: 0px 30px 0px 20px;
  }
 
 .upper-body {
@@ -89,7 +86,7 @@ form {
 }
 
 input,
-#search-container {
+#searchContainer {
     height: 90px; 
 }
 
@@ -109,7 +106,7 @@ textarea {
     font-weight: 525;
 }
 
-#search-container {
+#searchContainer {
     display: flex;
     flex-direction: row-reverse;
     margin-bottom: 12px;
@@ -118,7 +115,7 @@ textarea {
 input,
 textarea,
 .save-button,
-#search-container {
+#searchContainer {
     border-radius: 3px;
     border: 3px solid #5356A4;;
     width: 35vw;
@@ -139,7 +136,6 @@ textarea,
 article {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* grid-gap: 3px; */
     padding: 30px;
     width: 1650px;
     align-items: start;
@@ -197,16 +193,14 @@ article {
 .card-title {
     font-size: 45px;
     font-weight: 700;
-    padding-left: 30px;
-    padding-top: 35px;
-    padding-bottom: 15px;
+    padding: 35px 0px 15px 30px;
 }
 
 .card-body {
     font-weight: lighter;
     font-size: 40px;
-    padding-left: 30px;
-    padding-bottom: 25px;
+    padding: 0px 0px 25px 30px;
+    white-space: pre;
 }
 
 .horizontal-rule {
