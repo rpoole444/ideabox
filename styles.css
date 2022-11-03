@@ -9,7 +9,6 @@ html,
 body {
     height: 100%;
     width: 100%;
-    
 }
 
 #wrapper {
@@ -138,7 +137,6 @@ textarea,
     font-size: 35px;
 }
 
-
 article {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -200,6 +198,7 @@ article {
     background-color: #1f1f3d;
     border-radius: 2px;
 }
+
 .card-title {
     font-size: 45px;
     font-weight: 700;
