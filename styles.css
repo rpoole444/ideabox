@@ -163,9 +163,9 @@ article {
 
 .card-container {
     display: flex;
-    height: 25vh;
+    height: 35vh;
     width: 20vw;
-    border: 8px solid green;
+    border: 2px solid #1f1f3d;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -174,18 +174,23 @@ article {
 .card-footer {
     display: flex;
     width: 20vw;
-    height: 50px;
+    height: 30px;
     background-color: burlywood;
 }
 
 .card-header {
     justify-content: space-between;
+    background-color: #1f1f3d;
 }
 
 .card-footer {
     align-items: center;
+    background-color: #5356a4;
 }
 
+a {
+    color: #E9E9F3;
+}
 .red-star,
 .white-x-icon,
 .comment-icon {
@@ -193,4 +198,10 @@ article {
     width: 3vw;
 }
 
-+
+.card-title {
+    font-weight: bold;
+}
+
+.card-body {
+    font-weight: lighter;
+}
