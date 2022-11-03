@@ -88,10 +88,10 @@ form {
     justify-content: space-evenly;
 }
 
-input {
-    height: 100px; 
+input,
+#search-container {
+    height: 90px; 
 }
-
 
 textarea {
     height: 190px;
@@ -111,7 +111,6 @@ textarea {
 
 #search-container {
     display: flex;
-    height: 100px;
     flex-direction: row-reverse;
     margin-bottom: 12px;
 }
@@ -134,7 +133,7 @@ textarea,
 
 .search-bar {
     border: 2px solid;
-    font-size: 35px;
+    font-size: 30px;
 }
 
 article {
@@ -192,7 +191,7 @@ article {
 }
 
 .search-icon {
-    height: 60px;
+    height: 53px;
     padding: 20px;
     width: 65px;
     background-color: #1f1f3d;
