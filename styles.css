@@ -71,7 +71,7 @@ body {
 
 .upper-body {
     background-color: #a9aad2;
-    height: 1150px;
+    height: 1000px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -79,7 +79,7 @@ body {
 
 .lower-body {
     background-color: #eaeaf4;
-    height: 60%;
+    height: 1500px;
     width: 100%;
     display: flex;
 }
@@ -167,34 +167,35 @@ textarea {
 article {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    padding: 20px;
+    /* grid-gap: 3px; */
+    padding: 30px;
     width: 100%;
-    align-items: center;
+    align-items: start;
     justify-items: center;
     margin-bottom: 40px;
 }
 
 .card-container {
     display: flex;
-    height: 35vh;
-    width: 20vw;
+    height: 535x;
+    width: 600px;
     border: 2px solid #1f1f3d;
     flex-direction: column;
     justify-content: space-between;
+    background-color: #FFFFFF;
 }
 
 .card-header,
 .card-footer {
     display: flex;
-    width: 20vw;
-    height: 30px;
-    background-color: burlywood;
+    width: 600px;
+    height: 80px;
 }
 
 .card-header {
     justify-content: space-between;
     background-color: #1f1f3d;
+    align-items: center;
 }
 
 .card-footer {
@@ -208,18 +209,30 @@ a {
 .red-star,
 .white-x-icon,
 .comment-icon {
-    height: 4vh;
-    width: 3vw;
+    height: 70px;
+    width: 70px;
 }
 
 .card-title {
-    font-weight: bold;
+    font-size: 45px;
+    font-weight: 700;
+    padding-left: 30px;
+    padding-top: 35px;
+    padding-bottom: 20px;
 }
 
 .card-body {
     font-weight: lighter;
+    font-size: 40px;
+    padding-left: 30px;
+    padding-bottom: 25px;
 }
 
 .horizontal-rule {
     border: 2px solid #353567;
+}
+
+.comment {
+    font-size: 33px;
+    font-weight: 700px;
 }
