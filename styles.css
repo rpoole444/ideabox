@@ -1,8 +1,9 @@
+
 * {
     font-size: 16px;
     margin: 0 0 0 0;
     padding: 0;
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
 }
 
 body {
@@ -29,32 +30,36 @@ body {
 .side-bar {
    background-color: #1f1f3d;
    height: 100vh;
-   width: 30vw;
+   width: 20vw;
    display: flex;
    flex-direction: column;
    align-self: flex-start;
-
-
 }
 
 .side-title {
   color: #E9E9F3;
-  font-size: 20px;
+  font-size: 35px;
+  font-weight: 600;
  }
 
 .side-filter-title {
   color: #BFBFDD;
-  font-size: 14px;
+  font-size: 25px;
+  margin-top: 10px;
+  padding-left: 10px;
  }
 
 .side-button {
   color: #E9E9F3;
   background-color: #5356A4;
-  height: 45px;
-  width: 215px;
-  margin: 20px;
+  height: 73px;
+  width: 435px;
+  margin-bottom: 53px;
+  margin-top: 34px;
   box-sizing: border-box;
   align-self: center;
+  font-size: 38px;
+  font-weight: 525;
  }
 
  .side-title,
@@ -66,7 +71,7 @@ body {
 
 .upper-body {
     background-color: #a9aad2;
-    height: 50%;
+    height: 1000px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -74,7 +79,7 @@ body {
 
 .lower-body {
     background-color: #eaeaf4;
-    height: 50%;
+    height: 1500px;
     width: 100%;
     display: flex;
 }
@@ -87,18 +92,20 @@ body {
 form {
 
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: flex-start;
     flex-direction: column;
 }
 
 input, 
 textarea {
-    width: 30vw;
-    margin-bottom: 10px;
-    height:5vh;
+    height: 100px; 
  
 
+}
+
+.title-label {
+    display: block;
 }
 
 input,
@@ -106,11 +113,17 @@ textarea,
 .save-button,
 #search-container {
     border-radius: 3px;
-    border: 1px solid;
+    border: 3px solid;
+    width: 49vw;
+}
+
+.search-bar {
+    border: 2px solid;
+    font-size: 35px;
 }
 
 textarea {
-   height: 15vh;
+   height: 225px;
    resize: none;
    box-sizing: border-box;
    ;
@@ -119,32 +132,107 @@ textarea {
 .title-label,
 .body-label {
    margin-bottom: 10px;
+   font-size: 30px;
+   font-weight: 650;
 }
 
 .save-button {
     background-color: #1f1f3d;
     color: #E9E9f3;
-    width: 30vw;
-    height: 5vh;
+    height: 100px;;
     margin-top: 5px;
     margin-bottom: 20px;
     align-self: center;
     border-radius: 2px;
-    font-size: large;
+    font-size: 50px;
+    border: none;
+    font-weight: 525;
 }
 
 .search-icon {
-    height: 3vh;
-    width: 3vw;
-    align-self: center;
+    height: 60px;
+    padding: 20px;
+    width: 65px;
     background-color: #1f1f3d;
-    padding: 8px;
     border-radius: 2px;
 }
 
 #search-container {
     display: flex;
-    width: 30vw;
-    height: 5vh;
+    height: 100px;
     flex-direction: row-reverse;
+    margin-bottom: 12px;
+}
+
+article {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-gap: 3px; */
+    padding: 30px;
+    width: 100%;
+    align-items: start;
+    justify-items: center;
+    margin-bottom: 40px;
+}
+
+.card-container {
+    display: flex;
+    height: 535x;
+    width: 600px;
+    border: 2px solid #1f1f3d;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+}
+
+.card-header,
+.card-footer {
+    display: flex;
+    width: 600px;
+    height: 80px;
+}
+
+.card-header {
+    justify-content: space-between;
+    background-color: #1f1f3d;
+    align-items: center;
+}
+
+.card-footer {
+    align-items: center;
+    background-color: #5356a4;
+}
+
+a {
+    color: #E9E9F3;
+}
+.red-star,
+.white-x-icon,
+.comment-icon {
+    height: 70px;
+    width: 70px;
+}
+
+.card-title {
+    font-size: 45px;
+    font-weight: 700;
+    padding-left: 30px;
+    padding-top: 35px;
+    padding-bottom: 20px;
+}
+
+.card-body {
+    font-weight: lighter;
+    font-size: 40px;
+    padding-left: 30px;
+    padding-bottom: 25px;
+}
+
+.horizontal-rule {
+    border: 2px solid #353567;
+}
+
+.comment {
+    font-size: 33px;
+    font-weight: 700px;
 }

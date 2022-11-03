@@ -2,27 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta>
-  <link href="" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
   <link rel="stylesheet" href="styles.css">
   <title>Idea Box</title>
 </head>
   <body>
     <div id="wrapper">
     <section class="side-bar">
-      <h2 class="side-title">IdeaBox</h2>
-      <hr>
-      <h5 class="side-filter-title">Filter Starred Ideas</h5>
-      <button class="side-button" type="button">Show Starred Ideas</button>
-      <hr>
+      <h6 class="side-title"> IdeaBox</h6>
+      <hr class="horizontal-rule">
+      <h5 class="side-filter-title"> Filter Starred Ideas</h5>
+      <button class="side-button" type="button"> Show Starred Ideas</button>
+      <hr class="horizontal-rule">
     </section>
     <main class="main">
       <section class="upper-body">
           <form>
-            <label class="title-label">Title</label>
-            <input>
-            <label class="body-label">Body</label>
-            <textarea></textarea>
+            <label for="title-label-input">
+                <div class="title-label">Title</div>
+              <input name="title-label-input">
+            </label>
+            <label for="body-label-input">
+              <div class="body-label">Body</div>
+              <textarea name="body-label-input"></textarea>
+            </label>
             <button class="save-button" type="button">Save</button>
             <div id="search-container">
               <input placeholder=" Search ideas" class="search-bar" type="search">
@@ -30,39 +34,46 @@
             </div>  
           </form>
       </section>
-      <section class="lower-body"></section>
+      <section class="lower-body">
         <article>
-            <div class="idea-cards">
+            <div class="card-container">
+              <div class="card-header">
+                <img class="red-star" src="assets/star-active.svg">
+                <img class="white-x-icon" src="assets/delete.svg">
+              </div>
+              <h2 class="card-title"> Idea title</h2>
+              <p class="card-body"> Idea body. Don't ever <br> play yourself. Every <br> chance I get, I water <br> the plants, Lion! <br> Cloth talk.</p>
+              <div class="card-footer">
+                <img class="comment-icon" src="assets/comment.svg">
+                <a class="comment"> Comment</a>
+              </div>
+            </div>
+            <div class="card-container">
               <div class="card-header"></div>
               <p class="card-title"></p>
               <p class="card-body"></p>
               <div class="card-footer"></div>
             </div>
-            <div class="idea-cards">
+            <div class="card-container">
               <div class="card-header"></div>
               <p class="card-title"></p>
               <p class="card-body"></p>
               <div class="card-footer"></div>
             </div>
-            <div class="idea-cards">
+            <div class=card-container>
               <div class="card-header"></div>
               <p class="card-title"></p>
               <p class="card-body"></p>
               <div class="card-footer"></div>
             </div>
-            <div class="idea-cards">
-              <div class="card-header"></div>
-              <p class="card-title"></p>
-              <p class="card-body"></p>
-              <div class="card-footer"></div>
-            </div>
-            <div class="idea-cards">
+            <div class=card-container>
               <div class="card-header"></div>
               <p class="card-title"></p>
               <p class="card-body"></p>
               <div class="card-footer"></div>
             </div>
         </article>
+      </section>
       </main>
     </div>
   </body>
