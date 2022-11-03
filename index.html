@@ -10,19 +10,23 @@
   <body>
     <div id="wrapper">
     <section class="side-bar">
-      <h2 class="side-title">IdeaBox</h2>
-      <hr>
-      <h5 class="side-filter-title">Filter Starred Ideas</h5>
-      <button class="side-button" type="button">Show Starred Ideas</button>
-      <hr>
+      <h6 class="side-title"> IdeaBox</h6>
+      <hr class="horizontal-rule">
+      <h5 class="side-filter-title"> Filter Starred Ideas</h5>
+      <button class="side-button" type="button"> Show Starred Ideas</button>
+      <hr class="horizontal-rule">
     </section>
     <main class="main">
       <section class="upper-body">
           <form>
-            <label class="title-label">Title</label>
-            <input>
-            <label class="body-label">Body</label>
-            <textarea></textarea>
+            <label for="title-label-input">
+                <div class="title-label">Title</div>
+              <input name="title-label-input">
+            </label>
+            <label for="body-label-input">
+              <div class="body-label">Body</div>
+              <textarea name="body-label-input"></textarea>
+            </label>
             <button class="save-button" type="button">Save</button>
             <div id="search-container">
               <input placeholder=" Search ideas" class="search-bar" type="search">
