@@ -179,10 +179,6 @@ article {
     width: 480px;
 }
 
-.comment-text {
-    color: #E9E9F3;
-}
-
 .red-star-icon,
 .white-x-icon,
 .comment-icon {
@@ -218,6 +214,7 @@ article {
 }
 
 .comment-text {
+    color: #E9E9F3;
     font-size: 33px;
     font-weight: 700px;
 }
