@@ -19,7 +19,7 @@ body {
 }
 
 .main{
-    width: 100%;
+    width: 1500px;
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -29,8 +29,8 @@ body {
 
 .side-bar {
    background-color: #1f1f3d;
-   height: 100vh;
-   width: 20vw;
+   height: 2300px;
+   width: 550px;
    display: flex;
    flex-direction: column;
    align-self: flex-start;
@@ -38,28 +38,32 @@ body {
 
 .side-title {
   color: #E9E9F3;
-  font-size: 35px;
+  font-size: 38px;
   font-weight: 600;
+  margin: 20px;
  }
 
 .side-filter-title {
   color: #BFBFDD;
-  font-size: 25px;
-  margin-top: 10px;
-  padding-left: 10px;
+  font-size: 32px;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-weight: 525;
  }
 
 .side-button {
   color: #E9E9F3;
   background-color: #5356A4;
-  height: 73px;
-  width: 435px;
+  height: 90px;
+  width: 480px;
   margin-bottom: 53px;
   margin-top: 34px;
   box-sizing: border-box;
   align-self: center;
-  font-size: 38px;
+  font-size: 42px;
   font-weight: 525;
+  padding-right: 30px;
+  padding-left: 20px;
  }
 
  .side-title,
@@ -71,16 +75,20 @@ body {
 
 .upper-body {
     background-color: #a9aad2;
-    height: 1000px;
-    width: 100%;
-    display: flex;
+    height: 800px;
+    /* width: 1773px; */
     justify-content: center;
 }
 
 .lower-body {
     background-color: #eaeaf4;
     height: 1500px;
-    width: 100%;
+    /* width: 100%; */
+}
+
+.upper-body,
+.lower-body {
+    width: 1650px;
     display: flex;
 }
 
@@ -97,12 +105,13 @@ form {
     flex-direction: column;
 }
 
-input, 
-textarea {
+input {
     height: 100px; 
  
 
 }
+
+
 
 .title-label {
     display: block;
@@ -114,7 +123,7 @@ textarea,
 #search-container {
     border-radius: 3px;
     border: 3px solid;
-    width: 49vw;
+    width: 35vw;
 }
 
 .search-bar {
@@ -123,7 +132,7 @@ textarea,
 }
 
 textarea {
-   height: 225px;
+   height: 190px;
    resize: none;
    box-sizing: border-box;
    ;
@@ -139,7 +148,7 @@ textarea {
 .save-button {
     background-color: #1f1f3d;
     color: #E9E9f3;
-    height: 100px;;
+    height: 90px;;
     margin-top: 5px;
     margin-bottom: 20px;
     align-self: center;
@@ -176,20 +185,24 @@ article {
 }
 
 .card-container {
-    display: flex;
-    height: 535x;
-    width: 600px;
+    height: 525px;
     border: 2px solid #1f1f3d;
     flex-direction: column;
     justify-content: space-between;
     background-color: #FFFFFF;
 }
 
+
+.card-header,
+.card-footer {
+    height: 80px;
+}
+
+.card-container,
 .card-header,
 .card-footer {
     display: flex;
-    width: 600px;
-    height: 80px;
+    width: 480px;
 }
 
 .card-header {
@@ -218,7 +231,7 @@ a {
     font-weight: 700;
     padding-left: 30px;
     padding-top: 35px;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 }
 
 .card-body {
@@ -235,4 +248,8 @@ a {
 .comment {
     font-size: 33px;
     font-weight: 700px;
+}
+
+.card-container {
+    margin: 12px;
 }
