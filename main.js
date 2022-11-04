@@ -15,6 +15,7 @@ var commentIcon = document.querySelectorAll('.comment-icon');
 var cardContainer = document.querySelectorAll('.card-container')
 var cardTitle = document.querySelectorAll('card-title');
 var cardBody = document.querySelectorAll('card-body');
+var cardGrid = document.querySelector('.card-grid')
 
 // -----------------global variables-----------------------------------
 
@@ -24,6 +25,7 @@ var ideaBoxArray = [ ]
 
 saveButton.addEventListener('click', function() {
 saveIdea()
+renderIdeaBox()
 clearForm()
 })
 
@@ -32,9 +34,7 @@ clearForm()
 function saveIdea() {
     
     var newIdeaBox = new Idea(titleInput.value, bodyInput.value)
-    console.log(newIdeaBox)
     ideaBoxArray.push(newIdeaBox)
-    console.log(ideaBoxArray)
 }
 
 function clearForm() {
@@ -44,18 +44,22 @@ function clearForm() {
 
 
 function renderIdeaBox() {
-    cardContainer.innerHTML = ' ';
+    cardGrid.innerHTML = "";
+    
     for (var i = 0; i < ideaBoxArray.length; i++){
-    cardContainer[i].innerHTML += `
+        // console.log(ideaBoxArray[i].title)
+    cardGrid.innerHTML += `
+            <div class="card-container">
                 <div class="card-header">
                     <img class="red-star-icon" src="assets/star-active.svg">
                     <img class="white-x-icon" src="assets/delete.svg">
                 </div>
-                <h2 class="card-title">${titleInput.value}</h2>
-                <p class="card-body">${bodyInput.value}</p>
+                <h2 class="card-title">${ideaBoxArray[i].title}</h2>
+                <p class="card-body">${ideaBoxArray[i].body}</p>
                 <div class="card-footer">
                     <img class="comment-icon" src="assets/comment.svg">
                     <a class="comment-text"> Comment</a>
-                </div>`
+                </div>
+            </div>`
     }
 }
