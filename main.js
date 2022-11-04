@@ -47,7 +47,7 @@ function renderIdeaBox() {
     cardGrid.innerHTML = "";
     
     for (var i = 0; i < ideaBoxArray.length; i++){
-        // console.log(ideaBoxArray[i].title)
+
     cardGrid.innerHTML += `
             <div class="card-container">
                 <div class="card-header">
@@ -55,7 +55,7 @@ function renderIdeaBox() {
                     <img class="white-x-icon" src="assets/delete.svg">
                 </div>
                 <h2 class="card-title">${ideaBoxArray[i].title}</h2>
-                <p class="card-body">${ideaBoxArray[i].body}</p>
+                <p class="card-body rendered-body">${ideaBoxArray[i].body}</p>
                 <div class="card-footer">
                     <img class="comment-icon" src="assets/comment.svg">
                     <a class="comment-text"> Comment</a>
@@ -63,3 +63,4 @@ function renderIdeaBox() {
             </div>`
     }
 }
+

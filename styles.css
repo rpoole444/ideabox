@@ -212,7 +212,18 @@ article {
     font-size: 40px;
     padding: 0px 0px 25px 30px;
     white-space: pre;
+    height: 375px;
+    width: 400px;
 }
+
+.rendered-body {
+    height: 375px;
+    width: 400px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    overflow: scroll;
+}
+
 
 .horizontal-rule {
     border: 2px solid #353567;
@@ -223,6 +234,13 @@ article {
     font-size: 33px;
     font-weight: 700px;
 }
+
+/* .rendered-body-container {
+    width: 450px;
+    height: 400px;
+    overflow-x: auto;
+} */
+
 
 .hidden {
     display: none!important;
