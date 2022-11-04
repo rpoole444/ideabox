@@ -42,12 +42,9 @@ function clearForm() {
     bodyInput.value = " "
 }
 
-
 function renderIdeaBox() {
     cardGrid.innerHTML = "";
-    
     for (var i = 0; i < ideaBoxArray.length; i++){
-
     cardGrid.innerHTML += `
             <div class="card-container">
                 <div class="card-header">
