@@ -214,6 +214,14 @@ article {
     white-space: pre;
 }
 
+.rendered-body {
+    height: 375px;
+    width: 400px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    overflow: scroll;
+}
+
 .horizontal-rule {
     border: 2px solid #353567;
 }
