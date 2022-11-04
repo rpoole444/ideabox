@@ -22,10 +22,14 @@ var ideaBoxArray = [ ]
 
 // ----------------eventListeners-----------------------
 
-saveButton.addEventListener('click', updateIdea)
+saveButton.addEventListener('click', function() {
+saveIdea()
+clearForm()
+})
+
 // ----------------functions------------------------------
 
-function updateIdea() {
+function saveIdea() {
     
     var newIdeaBox = new Idea(titleInput.value, bodyInput.value)
     console.log(newIdeaBox)
@@ -33,6 +37,10 @@ function updateIdea() {
     console.log(ideaBoxArray)
 }
 
+function clearForm() {
+    titleInput.value = " " ;
+    bodyInput.value = " "
+}
 
 
 function renderIdeaBox() {
