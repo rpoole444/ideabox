@@ -176,6 +176,7 @@ article {
 }
 
 .red-star-icon,
+.white-star-icon,
 .white-x-icon,
 .comment-icon {
     height: 70px;
@@ -213,3 +214,6 @@ article {
     font-weight: 700px;
 }
 
+.hidden {
+    display: none!important;
+}
