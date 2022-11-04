@@ -24,7 +24,6 @@ var ideaBoxArray = [ ]
 
 saveButton.addEventListener('click', function() {
 saveIdea()
-updateIdea()
 clearForm()
 })
 
