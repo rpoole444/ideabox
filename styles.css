@@ -93,6 +93,7 @@ input,
 textarea {
     height: 190px;
     resize: none;
+    font-size: 30px;
 }
 
 .save-button {
@@ -112,6 +113,11 @@ textarea {
     margin-bottom: 12px;
 }
 
+input {
+    font-size: 30px;
+}
+
+
 input,
 textarea,
 .save-button,
@@ -119,6 +125,10 @@ textarea,
     border-radius: 3px;
     border: 3px solid #5356A4;;
     width: 35vw;
+}
+
+.save-button:active {
+    color: grey;
 }
 
 .title-label,

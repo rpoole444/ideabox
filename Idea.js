@@ -4,7 +4,6 @@ class Idea {
             this.body = body
             this.id = Date.now();
             this.star = false;
-
     }
             updateIdea() {
                 this.star = true; 
