@@ -22,13 +22,14 @@ var cardGrid = document.querySelector('.card-grid')
 var ideaBoxArray = [ ]
 
 // ----------------eventListeners-----------------------
-window.addEventListener('load', toggleSave);
+window.addEventListener('load', disableOnLoad);
+
 titleInput.addEventListener('input', function() {
-toggleSave()
+enableWithInput()
 testTitle()
 })
-bodyInput.addEventListener('change', function() {
-toggleSave()
+bodyInput.addEventListener('input', function() {
+enableWithInput()
 testBody()
 })
 
@@ -71,17 +72,19 @@ function renderIdeaBox() {
     }
 }
 
-function toggleSave() {
-    console.log("HELLO")
-console.log(titleInput.value, bodyInput.value) 
-    if(titleInput.value !== false || bodyInput.value !== false) { 
-           saveButton.disabled = true; 
-           console.log("IF STATEMENT")
-       } else { 
-           saveButton.disabled = false;
-           console.log("ELSE STATEMENT")
-       }
+
+
+function enableWithInput() {
+    if (titleInput.value !== "" && bodyInput.value !== "") {
+        saveButton.disabled = false;
+    }
 }
+
+function disableOnLoad() {
+    saveButton.disabled = true;
+}
+
+
 
 function testTitle() {
     console.log("titleInput")
