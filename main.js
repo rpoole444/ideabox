@@ -22,8 +22,18 @@ var cardGrid = document.querySelector('.card-grid')
 var ideaBoxArray = [ ]
 
 // ----------------eventListeners-----------------------
+window.addEventListener('load', toggleSave);
+titleInput.addEventListener('input', function() {
+toggleSave()
+testTitle()
+})
+bodyInput.addEventListener('change', function() {
+toggleSave()
+testBody()
+})
 
 saveButton.addEventListener('click', function() {
+toggleSave()
 saveIdea()
 renderIdeaBox()
 clearForm()
@@ -61,3 +71,22 @@ function renderIdeaBox() {
     }
 }
 
+function toggleSave() {
+    console.log("HELLO")
+console.log(titleInput.value, bodyInput.value) 
+    if(titleInput.value !== false || bodyInput.value !== false) { 
+           saveButton.disabled = true; 
+           console.log("IF STATEMENT")
+       } else { 
+           saveButton.disabled = false;
+           console.log("ELSE STATEMENT")
+       }
+}
+
+function testTitle() {
+    console.log("titleInput")
+}
+
+function testBody() {
+    console.log("bodyInput")
+}

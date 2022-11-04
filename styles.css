@@ -128,7 +128,7 @@ textarea,
 }
 
 .save-button:active {
-    color: grey;
+   background-color: white;
 }
 
 .title-label,
@@ -230,6 +230,17 @@ article {
     color: #E9E9F3;
     font-size: 33px;
     font-weight: 700px;
+}
+.save-button:disabled {
+    background-color: gray;
+    color: white;
+    height: 90px;;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    align-self: center;
+    font-size: 50px;
+    font-weight: 525;
+    cursor: not-allowed;
 }
 
 .hidden {
