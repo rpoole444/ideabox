@@ -45,6 +45,8 @@ clearForm()
 disableSaveButton()
 })
 
+
+
 // ----------------functions------------------------------
 
 function saveIdea() {
@@ -64,7 +66,7 @@ function renderIdeaBox() {
     cardGrid.innerHTML = "";
     for (var i = 0; i < ideaBoxArray.length; i++){
     cardGrid.innerHTML += `
-            <div class="card-container">
+            <div class="card-container new-card" id=${ideaBoxArray[i].id}>
                 <div class="card-header">
                     <img class="red-star-icon" src="assets/star-active.svg">
                     <img class="white-x-icon" src="assets/delete.svg">
@@ -78,6 +80,7 @@ function renderIdeaBox() {
             </div>`
     }
 }
+
 
 function disableSaveButton() {
     saveButton.disabled = true;
@@ -96,3 +99,14 @@ titleInputEnteredVar = true;
 function bodyInputEntered() {
 bodyInputEnteredVar = true;
 }
+
+cardContainer.addEventListener('click', function(event) {
+    deleteCard(event)
+});
+
+function deleteCard(event) {
+    console.log('Hello')
+    if(event.target.classList.contains(`white-x-icon`)) {
+      event.target.closest('.new-card').remove();
+    }
+  }
