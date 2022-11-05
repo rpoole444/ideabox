@@ -46,32 +46,36 @@ disableSaveButton()
 });
 
 cardGrid.addEventListener('click', function(event) {
-    console.log(ideaBoxArray.length)
     favoriteCard(event)
-    newIdeaBox.updateIdea(ideaBoxArray.id)
-    removeFromArray(ideaBoxArray.id)
+    newIdeaBox.updateIdea(event)
+    removeFromArray(event)
     deleteCard(event)
 });
 
 
 // ----------------functions------------------------------
 
-function removeFromArray(id) {
-    for(var i = 0; i < ideaBoxArray.length; i++){
-    if (ideaBoxArray.id === id) {
-    ideaBoxArray.splice(i, 1)
+function removeFromArray(event) {
+    for(var i = 0; i < ideaBoxArray.length; i++) {
+        if (event.target.classList.contains('white-x-icon')) {
+            ideaBoxArray.splice(i, 1)
+            console.log("remove from array", ideaBoxArray, ideaBoxArray.length)
+            // working !!
+        }
     }
-    }
-};
+}
+
 
 function saveIdea() {
     newIdeaBox = new Idea(titleInput.value, bodyInput.value)
     ideaBoxArray.push(newIdeaBox)
     bodyInputEnteredVar = false
     titleInputEnteredVar = false
-    console.log("ideaboxarray", ideaBoxArray)
-    console.log('id', ideaBoxArray[0].id)
+    console.log("add array", ideaBoxArray, ideaBoxArray.length)
+    // working!!
+    return newIdeaBox
 }
+
 
 function clearForm() {
     titleInput.value = " " ;
@@ -85,7 +89,8 @@ function renderIdeaBox() {
             <div class="card-container new-card" id=${ideaBoxArray[i].id}>
                 <div class="card-header">
                     <img class="white-star-icon" src="assets/star.svg">
-                    <img class="red-star-icon" src="assets/star-active.svg">
+                    <img class="red-star-icon hidden" src="assets/star-active.svg">
+                    <img class="white-star-icon hidden" src="assets/star.svg">
                     <img class="white-x-icon" src="assets/delete.svg">
                 </div>
                 <h2 class="card-title">${ideaBoxArray[i].title}</h2>
@@ -101,12 +106,14 @@ function renderIdeaBox() {
 function favoriteCard(event) {
     if (event.target.classList.contains('white-star-icon')) {
         event.target.classList.add('hidden');
-        console.log(event.target.closest('.card-header'))
-        event.target.closest('.card-header').toggle('.hidden');
-        console.log("after target", event.target)
+        event.target.nextElementSibling.className = "red-star-icon";
+    } 
+    if (event.target.classList.contains('red-star-icon')) {
+        event.target.classList.add('hidden');
+        event.target.nextElementSibling.className = "white-star-icon"
     }
-  }
-
+}
+   
 function disableSaveButton() {
     saveButton.disabled = true;
 }
@@ -127,7 +134,6 @@ bodyInputEnteredVar = true;
 
 function deleteCard(event) {
     if(event.target.classList.contains(`white-x-icon`)) {
-        console.log(ideaBoxArray.id, "why?")
       event.target.closest('.new-card').remove();
     }
   }

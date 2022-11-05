@@ -5,14 +5,17 @@ class Idea {
             this.id = Date.now();
             this.star = false;
         }
-        updateIdea(id) {
-                console.log("UPDATEIDEA RUNNING")
-                for (var i = 0; i < ideaBoxArray.length; i++) {
-                if (ideaBoxArray.id === id) {
-                ideaBoxArray.star = true; 
+        updateIdea(event) {
+                if (event.target.classList.contains('white-star-icon')) {
+                        newIdeaBox.star = true; 
                 }
+                if (event.target.classList.contains('red-star-icon')) {
+                        newIdeaBox.star = false;
+                }
+                console.log("array with updated star", ideaBoxArray)
+                console.log("OI with updated star", newIdeaBox)
         }
-        }
- }
+}
+   
 
 
