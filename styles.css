@@ -27,6 +27,7 @@ body {
    flex-direction: column;
    height: 2300px;
    width: 550px;
+   overflow-y: auto;
 }
 
 .side-title {
@@ -71,6 +72,7 @@ body {
 .lower-body {
     background-color: #eaeaf4;
     height: 1500px;
+    overflow-y: auto;
 }
 
 .upper-body,
