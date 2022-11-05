@@ -91,6 +91,7 @@ function renderIdeaBox() {
                     <img class="white-star-icon" src="assets/star.svg">
                     <img class="red-star-icon hidden" src="assets/star-active.svg">
                     <img class="white-star-icon hidden" src="assets/star.svg">
+                    <img class="red-star-icon hidden" src="assets/star-active.svg">
                     <img class="white-x-icon" src="assets/delete.svg">
                 </div>
                 <h2 class="card-title">${ideaBoxArray[i].title}</h2>
@@ -105,12 +106,12 @@ function renderIdeaBox() {
 
 function favoriteCard(event) {
     if (event.target.classList.contains('white-star-icon')) {
-        event.target.classList.add('hidden');
-        event.target.nextElementSibling.className = "red-star-icon";
-    } 
+        event.target.classList.toggle('hidden');
+        event.target.nextElementSibling.classList.toggle('hidden')
+    }
     if (event.target.classList.contains('red-star-icon')) {
-        event.target.classList.add('hidden');
-        event.target.nextElementSibling.className = "white-star-icon"
+        event.target.classList.toggle('hidden');
+        event.target.previousElementSibling.classList.toggle('hidden')
     }
 }
    
