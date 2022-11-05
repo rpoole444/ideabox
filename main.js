@@ -100,7 +100,7 @@ function bodyInputEntered() {
 bodyInputEnteredVar = true;
 }
 
-cardContainer.addEventListener('click', function(event) {
+cardGrid.addEventListener('click', function(event) {
     deleteCard(event)
 });
 
