@@ -30,22 +30,38 @@ window.addEventListener('load', disableSaveButton);
 titleInput.addEventListener('input', function () {
 titleInputEntered()
 enableSaveButton();
-})
+});
 
 bodyInput.addEventListener('input', function () {
 bodyInputEntered()
 enableSaveButton();
-})
-
+});
 
 saveButton.addEventListener('click', function() {
 saveIdea()
 renderIdeaBox()
 clearForm()
 disableSaveButton()
-})
+});
+
+cardGrid.addEventListener('click', function(event) {
+    deleteCard(event)
+    removeFromArray()
+});
+
 
 // ----------------functions------------------------------
+
+function removeFromArray(id) {
+    for(var i = 0; i < ideaBoxArray.length; i++){
+    if (ideaBoxArray.id === id) {
+    ideaBoxArray.splice(i, 1)
+    console.log("IF STATEMENT")
+    }
+    }
+    console.log("ideaboxarray", ideaBoxArray)
+    console.log('id', ideaBoxArray.id)
+};
 
 function saveIdea() {
     
@@ -64,7 +80,7 @@ function renderIdeaBox() {
     cardGrid.innerHTML = "";
     for (var i = 0; i < ideaBoxArray.length; i++){
     cardGrid.innerHTML += `
-            <div class="card-container">
+            <div class="card-container new-card" id=${ideaBoxArray[i].id}>
                 <div class="card-header">
                     <img class="red-star-icon" src="assets/star-active.svg">
                     <img class="white-x-icon" src="assets/delete.svg">
@@ -78,6 +94,7 @@ function renderIdeaBox() {
             </div>`
     }
 }
+
 
 function disableSaveButton() {
     saveButton.disabled = true;
@@ -96,3 +113,11 @@ titleInputEnteredVar = true;
 function bodyInputEntered() {
 bodyInputEnteredVar = true;
 }
+
+
+function deleteCard(event) {
+    console.log('Hello')
+    if(event.target.classList.contains(`white-x-icon`)) {
+      event.target.closest('.new-card').remove();
+    }
+  }
