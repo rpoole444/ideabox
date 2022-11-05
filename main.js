@@ -30,24 +30,38 @@ window.addEventListener('load', disableSaveButton);
 titleInput.addEventListener('input', function () {
 titleInputEntered()
 enableSaveButton();
-})
+});
 
 bodyInput.addEventListener('input', function () {
 bodyInputEntered()
 enableSaveButton();
-})
-
+});
 
 saveButton.addEventListener('click', function() {
 saveIdea()
 renderIdeaBox()
 clearForm()
 disableSaveButton()
-})
+});
 
+cardGrid.addEventListener('click', function(event) {
+    deleteCard(event)
+    removeFromArray()
+});
 
 
 // ----------------functions------------------------------
+
+function removeFromArray(id) {
+    for(var i = 0; i < ideaBoxArray.length; i++){
+    if (ideaBoxArray.id === id) {
+    ideaBoxArray.splice(i, 1)
+    console.log("IF STATEMENT")
+    }
+    }
+    console.log("ideaboxarray", ideaBoxArray)
+    console.log('id', ideaBoxArray.id)
+};
 
 function saveIdea() {
     
@@ -100,9 +114,6 @@ function bodyInputEntered() {
 bodyInputEnteredVar = true;
 }
 
-cardGrid.addEventListener('click', function(event) {
-    deleteCard(event)
-});
 
 function deleteCard(event) {
     console.log('Hello')
