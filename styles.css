@@ -219,10 +219,10 @@ article {
 .rendered-body {
     height: 375px;
     width: 450px;
-    background-color: #FFFFFF;
     word-wrap: break-word;
     white-space: pre-wrap;
-    overflow: scroll;
+    overflow: auto;
+    scrollbar-color: #ffffff;
 }
 
 .horizontal-rule {
