@@ -46,7 +46,9 @@ disableSaveButton()
 
 cardGrid.addEventListener('click', function(event) {
     deleteCard(event)
-    removeFromArray()
+    removeFromArray(ideaBoxArray.id)
+    updateIdea(ideaBoxArray.id)
+    favoriteCard(event)
 });
 
 
@@ -82,7 +84,8 @@ function renderIdeaBox() {
     cardGrid.innerHTML += `
             <div class="card-container new-card" id=${ideaBoxArray[i].id}>
                 <div class="card-header">
-                    <img class="red-star-icon" src="assets/star-active.svg">
+                    <img class="white-star-icon" src="assets/star.svg">
+                    <img class="red-star-icon hidden" src="assets/star-active.svg">
                     <img class="white-x-icon" src="assets/delete.svg">
                 </div>
                 <h2 class="card-title">${ideaBoxArray[i].title}</h2>
@@ -95,6 +98,13 @@ function renderIdeaBox() {
     }
 }
 
+function favoriteCard(event) {
+    if(event.target.classList.contains('white-star-icon')) {
+      event.target.closest(`.red-star-icon`).toggle('hidden');
+          // is redStar styled in our CSS already? we should add hidden 
+          // add `redStar` class in our render function
+    }
+  }
 
 function disableSaveButton() {
     saveButton.disabled = true;
@@ -113,7 +123,6 @@ titleInputEnteredVar = true;
 function bodyInputEntered() {
 bodyInputEnteredVar = true;
 }
-
 
 function deleteCard(event) {
     console.log('Hello')

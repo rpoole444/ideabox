@@ -5,7 +5,13 @@ class Idea {
             this.id = Date.now();
             this.star = false;
         }
-        updateIdea() {
-                this.star = true;     
+        updateIdea(id) {
+                console.log(ideaBoxArray)
+                for(var i = 0; i < ideaBoxArray.length; i++){
+                if (ideaBoxArray.id === id) {
+                ideaBoxArray.star = true; 
+                }
+                console.log(ideaBoxArray)
+                }
         }
 }
