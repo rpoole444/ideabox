@@ -9,14 +9,12 @@ updateIdea(event) {
         for (var i = 0; i < ideaBoxArray.length; i++) {
                 var grandparentIdToString = parseInt(event.target.parentElement.parentElement.id)
                 if (grandparentIdToString === ideaBoxArray[i].id && event.target.classList.contains('white-star-icon')) {
-                        console.log("Mayb", event.target)
                         ideaBoxArray[i].star = true
-                         console.log("Mayb", ideaBoxArray)
+                         console.log("Starred", ideaBoxArray)
         }
                 else if (grandparentIdToString === ideaBoxArray[i].id && event.target.classList.contains('red-star-icon')) {
-                        console.log("better?", event.target)
                         ideaBoxArray[i].star = false
-                        console.log("better?", ideaBoxArray)
+                        console.log("Unstarred", ideaBoxArray)
                 }
         }
 } 
@@ -26,17 +24,5 @@ return
 
 
 
-//         updateIdea(event) {
-//                 console.log(event.target)
-//                 if (event.target.classList.contains('white-star-icon')) {
-//                         console.log("array with updated star", ideaBoxArray)
-//                         console.log("OI with updated star", newIdeaBox)
-//                         return newIdeaBox.star = true
 
-//                 }
-//                 if (event.target.classList.contains('red-star-icon')) {
-//                         return newIdeaBox.star = false;
-//                 }
-//         }
-// }  
    
