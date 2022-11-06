@@ -4,13 +4,10 @@ var saveButton = document.querySelector('.save-button');
 
 var titleInput = document.querySelector('.title-label-input');
 var bodyInput = document.querySelector('.body-input');
-var searchInput = document.querySelector('.search-bar');
 
-var searchIcon = document.querySelectorAll('.search-icon');
 var redStar = document.querySelectorAll('.red-star-icon');
 var whiteStar = document.querySelectorAll('.white-star-icon');
 var whiteX = document.querySelectorAll('.white-x-icon');
-
 
 var cardContainer = document.querySelectorAll('.card-container')
 var cardTitle = document.querySelectorAll('card-title');
@@ -53,7 +50,6 @@ cardGrid.addEventListener('click', function(event) {
     deleteCard(event)
 });
 
-
 // ----------------functions------------------------------
 
 function removeFromArray(event) {
@@ -66,7 +62,6 @@ function removeFromArray(event) {
     }
 }
 
-
 function saveIdea() {
     newIdeaBox = new Idea(titleInput.value, bodyInput.value)
     ideaBoxArray.push(newIdeaBox)
@@ -76,7 +71,6 @@ function saveIdea() {
     // working!!
     return newIdeaBox
 }
-
 
 function clearForm() {
     titleInput.value = " " ;
@@ -114,13 +108,11 @@ function favoriteCard(event) {
         }
     }
 
-    function deleteCard(event) {
+function deleteCard(event) {
         if (event.target.classList.contains(`white-x-icon`)) {
             event.target.closest('.new-card').remove();
         }
     }
-
-
 }
    
 function disableSaveButton() {
