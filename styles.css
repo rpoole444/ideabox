@@ -37,31 +37,10 @@ body {
     margin: 20px;
 }
 
-.side-filter-title {
-    color: #BFBFDD;
-    font-size: 32px;
-    font-weight: 525;
-    margin-top: 20px;
-    margin-left: 20px;
-}
-
 .side-title,
 .side-filter-title {
   padding: 20px 0px 20px 14px;
 }
-
-.side-button {
-  color: #E9E9F3;
-  background-color: #5356A4;
-  height: 90px;
-  width: 480px;
-  align-self: center;
-  font-size: 42px;
-  font-weight: 525;
-  margin-bottom: 53px;
-  margin-top: 34px;
-  padding: 0px 30px 0px 20px;
- }
 
 .upper-body {
     background-color: #a9aad2;
@@ -140,10 +119,6 @@ textarea,
     font-weight: 650;
 }
 
-.search-bar {
-    border: 2px solid;
-    font-size: 30px;
-}
 
 article {
     display: grid;
@@ -189,18 +164,9 @@ article {
 
 .red-star-icon,
 .white-star-icon,
-.white-x-icon,
-.comment-icon {
+.white-x-icon{
     height: 70px;
     width: 70px;
-}
-
-.search-icon {
-    height: 53px;
-    padding: 20px;
-    width: 65px;
-    background-color: #1f1f3d;
-    border-radius: 2px;
 }
 
 .card-title {
@@ -229,11 +195,6 @@ article {
     border: 2px solid #353567;
 }
 
-.comment-text {
-    color: #E9E9F3;
-    font-size: 33px;
-    font-weight: 700px;
-}
 .save-button:disabled {
     background-color: gray;
     color: white;
