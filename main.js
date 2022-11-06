@@ -91,8 +91,6 @@ function renderIdeaBox() {
                 <div class="card-header">
                     <img class="white-star-icon" src="assets/star.svg">
                     <img class="red-star-icon hidden" src="assets/star-active.svg">
-                    <img class="white-star-icon hidden" src="assets/star.svg">
-                    <img class="red-star-icon hidden" src="assets/star-active.svg">
                     <img class="star white-x-icon" src="assets/delete.svg">
                 </div>
                 <h2 class="card-title">${ideaBoxArray[i].title}</h2>
