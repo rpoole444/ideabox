@@ -5,17 +5,20 @@ class Idea {
             this.id = Date.now();
             this.star = false;
         }
-        updateIdea(event) {
-                if (event.target.classList.contains('white-star-icon')) {
-                        newIdeaBox.star = true; 
+updateIdea(event) {
+        for (var i = 0; i < ideaBoxArray.length; i++) {
+                var grandparentIdToString = parseInt(event.target.parentElement.parentElement.id)
+                if (grandparentIdToString === ideaBoxArray[i].id && event.target.classList.contains('white-star-icon')) {
+                       ideaBoxArray[i].star = true
+                         console.log("star: true", ideaBoxArray)
                 }
-                if (event.target.classList.contains('red-star-icon')) {
-                        newIdeaBox.star = false;
+                else if (grandparentIdToString === ideaBoxArray[i].id && event.target.classList.contains('red-star-icon')) {
+                        ideaBoxArray[i].star = false
+                        console.log("star: false", ideaBoxArray)
                 }
-                console.log("array with updated star", ideaBoxArray)
-                console.log("OI with updated star", newIdeaBox)
-        }
+        } 
 }
-   
+}       
+
 
 

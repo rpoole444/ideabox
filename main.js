@@ -105,14 +105,24 @@ function renderIdeaBox() {
 }
 
 function favoriteCard(event) {
+    for (var i = 0; i < ideaBoxArray.length; i++) {
     if (event.target.classList.contains('white-star-icon')) {
         event.target.classList.toggle('hidden');
         event.target.nextElementSibling.classList.toggle('hidden')
     }
     if (event.target.classList.contains('red-star-icon')) {
         event.target.classList.toggle('hidden');
-        event.target.previousElementSibling.classList.toggle('hidden')
+        event.target.previousElementSibling.classList.toggle('hidden') 
     }
+}
+
+    function deleteCard(event) {
+        if (event.target.classList.contains(`white-x-icon`)) {
+            event.target.closest('.new-card').remove();
+        }
+    }
+
+
 }
    
 function disableSaveButton() {
