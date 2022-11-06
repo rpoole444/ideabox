@@ -10,7 +10,7 @@ var searchIcon = document.querySelectorAll('.search-icon');
 var redStar = document.querySelectorAll('.red-star-icon');
 var whiteStar = document.querySelectorAll('.white-star-icon');
 var whiteX = document.querySelectorAll('.white-x-icon');
-var commentIcon = document.querySelectorAll('.comment-icon');
+
 
 var cardContainer = document.querySelectorAll('.card-container')
 var cardTitle = document.querySelectorAll('card-title');
@@ -97,10 +97,7 @@ function renderIdeaBox() {
                 </div>
                 <h2 class="card-title">${ideaBoxArray[i].title}</h2>
                 <p class="card-body rendered-body">${ideaBoxArray[i].body}</p>
-                <div class="card-footer">
-                    <img class="comment-icon" src="assets/comment.svg">
-                    <a class="comment-text"> Comment</a>
-                </div>
+                <div class="card-footer"></div>
             </div>`
     }
 }
