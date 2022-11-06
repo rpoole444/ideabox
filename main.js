@@ -46,6 +46,7 @@ disableSaveButton()
 });
 
 cardGrid.addEventListener('click', function(event) {
+    event.preventDefault()
     favoriteCard(event)
     newIdeaBox.updateIdea(event)
     removeFromArray(event)
@@ -92,7 +93,7 @@ function renderIdeaBox() {
                     <img class="red-star-icon hidden" src="assets/star-active.svg">
                     <img class="white-star-icon hidden" src="assets/star.svg">
                     <img class="red-star-icon hidden" src="assets/star-active.svg">
-                    <img class="white-x-icon" src="assets/delete.svg">
+                    <img class="star white-x-icon" src="assets/delete.svg">
                 </div>
                 <h2 class="card-title">${ideaBoxArray[i].title}</h2>
                 <p class="card-body rendered-body">${ideaBoxArray[i].body}</p>
@@ -106,15 +107,17 @@ function renderIdeaBox() {
 
 function favoriteCard(event) {
     for (var i = 0; i < ideaBoxArray.length; i++) {
-    if (event.target.classList.contains('white-star-icon')) {
-        event.target.classList.toggle('hidden');
-        event.target.nextElementSibling.classList.toggle('hidden')
+        if (event.target.classList.contains('white-star-icon')) {
+            event.target.classList.toggle('hidden');
+            event.target.nextElementSibling.classList.toggle('hidden')
+            return
+        }
+        if (event.target.classList.contains('red-star-icon')) {
+            event.target.classList.toggle('hidden');
+            event.target.previousElementSibling.classList.toggle('hidden')
+            return
+        }
     }
-    if (event.target.classList.contains('red-star-icon')) {
-        event.target.classList.toggle('hidden');
-        event.target.previousElementSibling.classList.toggle('hidden') 
-    }
-}
 
     function deleteCard(event) {
         if (event.target.classList.contains(`white-x-icon`)) {

@@ -9,15 +9,18 @@ updateIdea(event) {
         for (var i = 0; i < ideaBoxArray.length; i++) {
                 var grandparentIdToString = parseInt(event.target.parentElement.parentElement.id)
                 if (grandparentIdToString === ideaBoxArray[i].id && event.target.classList.contains('white-star-icon')) {
-                       ideaBoxArray[i].star = true
+                        console.log("Mayb", event.target)
+                        ideaBoxArray[i].star = true
                          console.log("Mayb", ideaBoxArray)
         }
                 else if (grandparentIdToString === ideaBoxArray[i].id && event.target.classList.contains('red-star-icon')) {
+                        console.log("better?", event.target)
                         ideaBoxArray[i].star = false
                         console.log("better?", ideaBoxArray)
                 }
         }
 } 
+return
 }       
 
 
