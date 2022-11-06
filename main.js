@@ -48,16 +48,20 @@ cardGrid.addEventListener('click', function(event) {
     newIdeaBox.updateIdea(event)
     removeFromArray(event)
     deleteCard(event)
+    console.log(event.target.parentElement.parentElement.id)
+    
 });
 
 // ----------------functions------------------------------
 
 function removeFromArray(event) {
-    for(var i = 0; i < ideaBoxArray.length; i++) {
-        if (event.target.classList.contains('white-x-icon')) {
-            ideaBoxArray.splice(i, 1)
-            console.log("remove from array", ideaBoxArray, ideaBoxArray.length)
-            // working !!
+    if (event.target.classList.contains('white-x-icon')){
+        for(var i = 0; i < ideaBoxArray.length; i++) {
+            if( ideaBoxArray[i].id === parseInt(event.target.parentElement.parentElement.id)) {
+                ideaBoxArray.splice(i, 1)
+                console.log("remove from array", ideaBoxArray, ideaBoxArray.length)
+                // working !!
+            }
         }
     }
 }
@@ -108,11 +112,11 @@ function favoriteCard(event) {
         }
     }
 
-function deleteCard(event) {
-        if (event.target.classList.contains(`white-x-icon`)) {
-            event.target.closest('.new-card').remove();
-        }
-    }
+// function deleteCard(event) {
+//         if (event.target.classList.contains(`white-x-icon`)) {
+//             event.target.closest('.new-card').remove();
+//         }
+//     }
 }
    
 function disableSaveButton() {
