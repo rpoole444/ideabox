@@ -12,10 +12,10 @@ This app helps users generate, store and favorite ideas. Users are able to input
 ![Screenshot 2022-11-07 at 10 22 43 AM](https://user-images.githubusercontent.com/111721297/200418931-1b5d02fa-afa1-4940-9b81-66fc7832a910.png)
 
 ### Context:
-- This project was assigned to Mod 1 students in Turing's Front-End Engineering bootcamp. Students were given 6 days to recreate a comp and add functionality to allow users to create and favorite new cards, We had about 5 days of work with about 6-8 hours a day to get the site functional. 
+This project was assigned to Mod 1 students in Turing's Front-End Engineering bootcamp. Students were given 6 days to recreate a comp and add functionality to allow users to create, add, and favorite new cards. We had about 5 days of work with about 6-8 hours a day to get the site functional. 
 
 ### Contributors:
-This Project was created by Tristin Sorrels, Reid Poole, Winston Calhoun
+This project was created by Tristin Sorrels, Reid Poole, Winston Calhoun
 Tristin Sorrells: - https://github.com/Tristinsorrells1 || https://www.linkedin.com/in/tristinsorrells/
 Winston Calhoun - https://github.com/WinstonCalhoun || https://www.linkedin.com/in/winston-calhoun-9841bb256/
 Reid Poole - https://github.com/rpoole444 || https://www.linkedin.com/in/reid-poole-367948a8/
