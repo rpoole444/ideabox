@@ -1,7 +1,7 @@
 # IDEABOX
 
 ### Abstract:
-This app helps users generate, store and favorite ideas. Users are able to input title text and body text then save the personal idea information using the save button to save the instance in the field directly below. Users can also favorite and un-favorite their created idea cards by clicking the star button. Finally users may easily delete an idea card by clicking the 'x' in each card instance
+This app helps users create, store, and favorite ideas. Users are able to input title text and body text and save their new card to the gallery by clicking the save button. Users can also favorite and un-favorite their created idea cards by clicking the star button. Finally, users can easily delete an idea card by clicking the 'x' on each card.
 
 ### Installation Instructions:
 - Users should clone the repository to their local machine: git clone 
@@ -34,10 +34,10 @@ Reid Poole - https://github.com/rpoole444 || https://www.linkedin.com/in/reid-po
 
 #### Wins
 
-- We created a very stable foundation within our CSS and HTML data model.
+- We created a very stable foundation within our CSS, HTML, and data model.
 - We completed our minimum viable product, with all functions operating smoothly.
 
 #### Challenges
 
- - Working with the elements that were not availble upon page load
- - Working to get our DOM to reflect our data model properly
+ - Working with the elements that were not availble upon page load.
+ - Working to get our DOM to reflect changes in the data model.
