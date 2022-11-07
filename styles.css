@@ -98,7 +98,6 @@ input {
     font-size: 30px;
 }
 
-
 input,
 textarea,
 .save-button,
@@ -118,7 +117,6 @@ textarea,
     font-size: 30px;
     font-weight: 650;
 }
-
 
 article {
     display: grid;
@@ -173,20 +171,32 @@ article {
     font-size: 45px;
     font-weight: 700;
     padding: 35px 0px 15px 30px;
+    overflow-y: auto;
+    scrollbar-color: #ffffff;
+    height: 70px;
+    width: 450px;
+}
+
+.card-body,
+.rendered-body,
+.card-title {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    align-self: flex-start;
 }
 
 .card-body {
+    height: 375px;
     font-weight: lighter;
     font-size: 40px;
     padding: 0px 0px 25px 30px;
-    white-space: pre;
+    width: 400px;
+    align-self: flex-start;
 }
 
 .rendered-body {
     height: 375px;
     width: 450px;
-    word-wrap: break-word;
-    white-space: pre-wrap;
     overflow: auto;
     scrollbar-color: #ffffff;
 }
@@ -199,8 +209,7 @@ article {
     background-color: gray;
     color: white;
     height: 90px;;
-    margin-top: 5px;
-    margin-bottom: 20px;
+    margin: 5px 0px 20px 0px;
     align-self: center;
     font-size: 50px;
     font-weight: 525;
