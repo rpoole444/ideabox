@@ -127,14 +127,29 @@ function enableSaveButton() {
     if (titleInputEnteredVar  && bodyInputEnteredVar) {
         saveButton.disabled = false;
     }
+    else {
+        saveButton.disabled = true;
+    }
 }
 
 function titleInputEntered() {
-titleInputEnteredVar = true;
+    var titleInputLength = titleInput.value.trim().length
+    if (titleInputLength !== 0) {
+    titleInputEnteredVar = true;
+    }
+    else {
+        titleInputEnteredVar = false;
+    }
 }
 
 function bodyInputEntered() {
-bodyInputEnteredVar = true;
+    var bodyInputLength = bodyInput.value.trim().length
+    if (bodyInputLength !== 0) {
+    bodyInputEnteredVar = true;
+    }
+    else {
+        bodyInputEnteredVar = false; 
+    }
 }
 
 function deleteCard(event) {
