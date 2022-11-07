@@ -1,7 +1,7 @@
 # IDEABOX
 
 ### Abstract:
-This app helps users create, store, and favorite ideas. Users are able to input title text and body text and save their new card to the gallery by clicking the save button. Users can also favorite and un-favorite their created idea cards by clicking the star button. Finally, users can easily delete an idea card by clicking the 'x' on each card.
+This app helps users create, store, and favorite ideas. Users are able to create an idea card with a title and body text of their choosing. Users can save their new cards to the gallery below by clicking the save button. Users can also favorite and un-favorite their idea cards by clicking the star button. Finally, users can easily delete an idea card by clicking the 'x' on each card.
 
 ### Installation Instructions:
 - Users should clone the repository to their local machine: git clone 
