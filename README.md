@@ -25,3 +25,15 @@ Reid Poole - https://github.com/rpoole444 || https://www.linkedin.com/in/reid-po
 - Understand what it looks like to have a separate data model (using a class) and DOM model
 - Incorporate & iterate over arrays in order to filter what is being displayed
 - Craft code with clean style, using small functions that show trends toward DRYness and SRP
+
+### Wins + Challenges:
+
+#### Wins
+
+- We created a very stable foundation within our CSS and HTML data model.
+- We completed our minimum viable product, with all functions operating smoothly.
+
+#### Challenges
+
+ - Working with the elements that were not availble upon page load
+ - Working to get our DOM to reflect our data model properly
