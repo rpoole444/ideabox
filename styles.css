@@ -1,6 +1,6 @@
 * {
     font-size: 16px;
-    margin: 0 0 0 0;
+    margin: 0;
     padding: 0;
     font-family: "Open Sans";
 }
@@ -22,24 +22,26 @@ body {
 }
 
 .side-bar {
-   background-color: #1f1f3d;
-   display: flex;
-   flex-direction: column;
-   height: 2300px;
-   width: 550px;
-   overflow-y: auto;
+    background-color: #1f1f3d;
+    display: flex;
+    flex-direction: column;
+    height: 2300px;
+    width: 550px;
+    overflow-y: auto;
 }
 
 .side-title {
     color: #E9E9F3;
-    font-size: 38px;
+    font-size: 45px;
     font-weight: 600;
     margin: 20px;
+    padding: 20px 0px 20px 14px;
 }
 
-.side-title,
-.side-filter-title {
-  padding: 20px 0px 20px 14px;
+.horizontal-rule {
+    border: 2px solid #353567;
+    padding: 15px;
+    height: 200px;
 }
 
 .upper-body {
@@ -66,9 +68,9 @@ form {
     justify-content: space-evenly;
 }
 
-input,
-#searchContainer {
+input {
     height: 90px; 
+    font-size: 30px;
 }
 
 textarea {
@@ -88,28 +90,27 @@ textarea {
     font-weight: 525;
 }
 
-#searchContainer {
-    display: flex;
-    flex-direction: row-reverse;
-    margin-bottom: 12px;
+.save-button:active {
+    background-color: white;
 }
 
-input {
-    font-size: 30px;
+.save-button:disabled {
+    background-color: gray;
+    color: white;
+    height: 90px;;
+    margin: 5px 0px 20px 0px;
+    align-self: center;
+    font-size: 50px;
+    font-weight: 525;
+    cursor: not-allowed;
 }
-
 
 input,
 textarea,
-.save-button,
-#searchContainer {
+.save-button {
     border-radius: 3px;
     border: 3px solid #5356A4;;
     width: 35vw;
-}
-
-.save-button:active {
-   background-color: white;
 }
 
 .title-label,
@@ -118,7 +119,6 @@ textarea,
     font-size: 30px;
     font-weight: 650;
 }
-
 
 article {
     display: grid;
@@ -173,38 +173,34 @@ article {
     font-size: 45px;
     font-weight: 700;
     padding: 35px 0px 15px 30px;
+    overflow-y: auto;
+    scrollbar-color: #ffffff;
+    height: 70px;
+    width: 450px;
 }
 
 .card-body {
+    height: 375px;
     font-weight: lighter;
     font-size: 40px;
     padding: 0px 0px 25px 30px;
-    white-space: pre;
+    width: 400px;
+    align-self: flex-start;
 }
 
 .rendered-body {
     height: 375px;
     width: 450px;
-    word-wrap: break-word;
-    white-space: pre-wrap;
     overflow: auto;
     scrollbar-color: #ffffff;
 }
 
-.horizontal-rule {
-    border: 2px solid #353567;
-}
-
-.save-button:disabled {
-    background-color: gray;
-    color: white;
-    height: 90px;;
-    margin-top: 5px;
-    margin-bottom: 20px;
-    align-self: center;
-    font-size: 50px;
-    font-weight: 525;
-    cursor: not-allowed;
+.card-body,
+.rendered-body,
+.card-title {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    align-self: flex-start;
 }
 
 .hidden {
