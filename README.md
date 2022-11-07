@@ -2,11 +2,7 @@
 # What's for Dinner? 
 
 ### Info:
-We built an idea card generator.
-- Can add a title and some context in a body.
-- Save the card to a section for the users viewing.
-- A favoriting and un-favoriting option for each new card instance.
-- Ability to remove an idea card if it is unwanted.
+- We built an idea card generator that allows users to create and save new idea cards with whatever title and body text they input. Users can favorite cards by clicking the star button and then unfavorite them by clicking the red star button. 
 
 ### Installation Instructions:
 - First go to gitHub and fork this repo. https://github.com/rpoole444/ideabox. 
