@@ -19,7 +19,9 @@ This project was assigned to Mod 1 students in Turing's Front-End Engineering bo
 #### This project was created by: 
 
 Tristin Sorrells: - https://github.com/Tristinsorrells1 || https://www.linkedin.com/in/tristinsorrells/
+
 Winston Calhoun - https://github.com/WinstonCalhoun || https://www.linkedin.com/in/winston-calhoun-9841bb256/
+
 Reid Poole - https://github.com/rpoole444 || https://www.linkedin.com/in/reid-poole-367948a8/
 
 ### Learning Goals:
