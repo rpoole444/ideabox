@@ -5,10 +5,9 @@
 - We built an idea card generator that allows users to create and save new idea cards with whatever title and body text they input. Users can favorite cards by clicking the star button and then unfavorite them by clicking the red star button. 
 
 ### Installation Instructions:
-- First go to gitHub and fork this repo. https://github.com/rpoole444/ideabox. 
-- Next, go to your terminal and clone the repository down to the directory you would like to work out of. 
- Type open index.HTML to open the page with the app on it.
-- Run open inner.html in terminal to view in browser.
+- Users should clone the repository to their local machine: git clone 
+- Users should `cd` into the repository in their terminal: cd 'ideabox'
+- Users should open the index.html file: open index.html
 
 ### Preview of App:
 ![Screenshot 2022-11-07 at 10 22 43 AM](https://user-images.githubusercontent.com/111721297/200418931-1b5d02fa-afa1-4940-9b81-66fc7832a910.png)
