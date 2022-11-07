@@ -4,13 +4,10 @@ var saveButton = document.querySelector('.save-button');
 
 var titleInput = document.querySelector('.title-label-input');
 var bodyInput = document.querySelector('.body-input');
-var searchInput = document.querySelector('.search-bar');
 
-var searchIcon = document.querySelectorAll('.search-icon');
 var redStar = document.querySelectorAll('.red-star-icon');
 var whiteStar = document.querySelectorAll('.white-star-icon');
 var whiteX = document.querySelectorAll('.white-x-icon');
-var commentIcon = document.querySelectorAll('.comment-icon');
 
 var cardContainer = document.querySelectorAll('.card-container')
 var cardTitle = document.querySelectorAll('card-title');
@@ -22,6 +19,7 @@ var cardGrid = document.querySelector('.card-grid')
 var ideaBoxArray = [ ]
 var titleInputEnteredVar = false
 var bodyInputEnteredVar = false
+var newIdeaBox = new Idea(titleInput.value, bodyInput.value)
 
 
 // ----------------eventListeners-----------------------
@@ -40,35 +38,43 @@ enableSaveButton();
 saveButton.addEventListener('click', function() {
 saveIdea()
 renderIdeaBox()
-clearForm()
+// saveFavorites()
 disableSaveButton()
+clearForm()
 });
 
 cardGrid.addEventListener('click', function(event) {
+    event.preventDefault()
+    favoriteCard(event)
+    newIdeaBox.updateIdea(event)
+    removeFromArray(event)
     deleteCard(event)
-    removeFromArray()
+    console.log(event.target.parentElement.parentElement.id)
+    
 });
-
 
 // ----------------functions------------------------------
 
-function removeFromArray(id) {
-    for(var i = 0; i < ideaBoxArray.length; i++){
-    if (ideaBoxArray.id === id) {
-    ideaBoxArray.splice(i, 1)
-    console.log("IF STATEMENT")
+function removeFromArray(event) {
+    if (event.target.classList.contains('white-x-icon')){
+        for(var i = 0; i < ideaBoxArray.length; i++) {
+            if( ideaBoxArray[i].id === parseInt(event.target.parentElement.parentElement.id)) {
+                ideaBoxArray.splice(i, 1)
+                console.log("remove from array", ideaBoxArray, ideaBoxArray.length)
+                // working !!
+            }
+        }
     }
-    }
-    console.log("ideaboxarray", ideaBoxArray)
-    console.log('id', ideaBoxArray.id)
-};
+}
 
 function saveIdea() {
-    
-    var newIdeaBox = new Idea(titleInput.value, bodyInput.value)
+    newIdeaBox = new Idea(titleInput.value, bodyInput.value)
     ideaBoxArray.push(newIdeaBox)
     bodyInputEnteredVar = false
     titleInputEnteredVar = false
+    console.log("add array", ideaBoxArray, ideaBoxArray.length)
+    // working!!
+    return newIdeaBox
 }
 
 function clearForm() {
@@ -79,23 +85,76 @@ function clearForm() {
 function renderIdeaBox() {
     cardGrid.innerHTML = "";
     for (var i = 0; i < ideaBoxArray.length; i++){
+    if (ideaBoxArray[i].star === false) {
     cardGrid.innerHTML += `
             <div class="card-container new-card" id=${ideaBoxArray[i].id}>
                 <div class="card-header">
-                    <img class="red-star-icon" src="assets/star-active.svg">
-                    <img class="white-x-icon" src="assets/delete.svg">
+                    <img class="white-star-icon" src="assets/star.svg">
+                    <img class="red-star-icon hidden" src="assets/star-active.svg">
+                    <img class="star white-x-icon" src="assets/delete.svg">
                 </div>
                 <h2 class="card-title">${ideaBoxArray[i].title}</h2>
                 <p class="card-body rendered-body">${ideaBoxArray[i].body}</p>
-                <div class="card-footer">
-                    <img class="comment-icon" src="assets/comment.svg">
-                    <a class="comment-text"> Comment</a>
-                </div>
+                <div class="card-footer"></div>
             </div>`
+    }
+if (ideaBoxArray[i].star) {
+    cardGrid.innerHTML += `
+            <div class="card-container new-card" id=${ideaBoxArray[i].id}>
+                <div class="card-header">
+                    <img class="white-star-icon hidden" src="assets/star.svg">
+                    <img class="red-star-icon" src="assets/star-active.svg">
+                    <img class="star white-x-icon" src="assets/delete.svg">
+                </div>
+                <h2 class="card-title">${ideaBoxArray[i].title}</h2>
+                <p class="card-body rendered-body">${ideaBoxArray[i].body}</p>
+                <div class="card-footer"></div>
+            </div>`
+}
     }
 }
 
+function favoriteCard(event) {
+    for (var i = 0; i < ideaBoxArray.length; i++) {
+        if (event.target.classList.contains('white-star-icon')) {
+            event.target.classList.toggle('hidden');
+            event.target.nextElementSibling.classList.toggle('hidden')
+            return
+        }
+        if (event.target.classList.contains('red-star-icon')) {
+            event.target.classList.toggle('hidden');
+            event.target.previousElementSibling.classList.toggle('hidden')
+            return
+        }
+    }
+}
 
+// function saveFavorites() {
+//     for (var i = 0; i < ideaBoxArray.length; i++) {
+//         if (ideaBoxArray[i].star === true) {
+//             console.log("HEY")
+//             cardGrid.innerHTML += `
+//             <div class="card-container new-card" id=${ideaBoxArray[i].id}>
+//                 <div class="card-header">
+//                     <img class="white-star-icon hidden" src="assets/star.svg">
+//                     <img class="red-star-icon" src="assets/star-active.svg">
+//                     <img class="star white-x-icon" src="assets/delete.svg">
+//                 </div>
+//                 <h2 class="card-title">${ideaBoxArray[i].title}</h2>
+//                 <p class="card-body rendered-body">${ideaBoxArray[i].body}</p>
+//                 <div class="card-footer"></div>
+//             </div>`
+//             return
+//         }
+        
+//     }
+// }
+
+
+
+
+
+   
 function disableSaveButton() {
     saveButton.disabled = true;
 }
@@ -104,19 +163,32 @@ function enableSaveButton() {
     if (titleInputEnteredVar  && bodyInputEnteredVar) {
         saveButton.disabled = false;
     }
+    else {
+        saveButton.disabled = true;
+    }
 }
 
 function titleInputEntered() {
-titleInputEnteredVar = true;
+    var titleInputLength = titleInput.value.trim().length
+    if (titleInputLength !== 0) {
+    titleInputEnteredVar = true;
+    }
+    else {
+        titleInputEnteredVar = false;
+    }
 }
 
 function bodyInputEntered() {
-bodyInputEnteredVar = true;
+    var bodyInputLength = bodyInput.value.trim().length
+    if (bodyInputLength !== 0) {
+    bodyInputEnteredVar = true;
+    }
+    else {
+        bodyInputEnteredVar = false; 
+    }
 }
 
-
 function deleteCard(event) {
-    console.log('Hello')
     if(event.target.classList.contains(`white-x-icon`)) {
       event.target.closest('.new-card').remove();
     }
