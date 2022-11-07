@@ -12,7 +12,7 @@ This app helps users create, store, and favorite ideas. Users are able to create
 ![Screenshot 2022-11-07 at 10 22 43 AM](https://user-images.githubusercontent.com/111721297/200418931-1b5d02fa-afa1-4940-9b81-66fc7832a910.png)
 
 ### Context:
-This project was assigned to Mod 1 students in Turing's Front-End Engineering bootcamp. Students were given 6 days to recreate a comp and add functionality to allow users to create, add, and favorite new cards. We had about 5 days of work with about 6-8 hours a day to get the site functional. 
+This project was assigned to Mod 1 students in Turing's Front-End Engineering bootcamp. Students were given 6 days to recreate a comp and add functionality to allow users to create, add, and favorite new cards.
 
 ### Contributors:
 
