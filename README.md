@@ -9,7 +9,7 @@ This app helps users create, store, and favorite ideas. Users are able to create
 - Users should open the index.html file: open index.html
 
 ### Preview of App:
-![Uploading Library___Loom_-_7_November_2022_AdobeExpress (1).gif…]()
+![Library___Loom_-_7_November_2022_AdobeExpress (1)](https://user-images.githubusercontent.com/109977562/200437243-a9ca1bd9-15ac-442f-b805-25490c810aae.gif)
 
 ### Context:
 This project was assigned to Mod 1 students in Turing's Front-End Engineering bootcamp. Students were given 6 days to recreate a comp and add functionality to allow users to create, add, and favorite new cards.
