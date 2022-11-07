@@ -38,8 +38,9 @@ enableSaveButton();
 saveButton.addEventListener('click', function() {
 saveIdea()
 renderIdeaBox()
-clearForm()
+// saveFavorites()
 disableSaveButton()
+clearForm()
 });
 
 cardGrid.addEventListener('click', function(event) {
@@ -84,6 +85,7 @@ function clearForm() {
 function renderIdeaBox() {
     cardGrid.innerHTML = "";
     for (var i = 0; i < ideaBoxArray.length; i++){
+    if (ideaBoxArray[i].star === false) {
     cardGrid.innerHTML += `
             <div class="card-container new-card" id=${ideaBoxArray[i].id}>
                 <div class="card-header">
@@ -95,6 +97,20 @@ function renderIdeaBox() {
                 <p class="card-body rendered-body">${ideaBoxArray[i].body}</p>
                 <div class="card-footer"></div>
             </div>`
+    }
+if (ideaBoxArray[i].star) {
+    cardGrid.innerHTML += `
+            <div class="card-container new-card" id=${ideaBoxArray[i].id}>
+                <div class="card-header">
+                    <img class="white-star-icon hidden" src="assets/star.svg">
+                    <img class="red-star-icon" src="assets/star-active.svg">
+                    <img class="star white-x-icon" src="assets/delete.svg">
+                </div>
+                <h2 class="card-title">${ideaBoxArray[i].title}</h2>
+                <p class="card-body rendered-body">${ideaBoxArray[i].body}</p>
+                <div class="card-footer"></div>
+            </div>`
+}
     }
 }
 
@@ -111,13 +127,33 @@ function favoriteCard(event) {
             return
         }
     }
-
-// function deleteCard(event) {
-//         if (event.target.classList.contains(`white-x-icon`)) {
-//             event.target.closest('.new-card').remove();
-//         }
-//     }
 }
+
+// function saveFavorites() {
+//     for (var i = 0; i < ideaBoxArray.length; i++) {
+//         if (ideaBoxArray[i].star === true) {
+//             console.log("HEY")
+//             cardGrid.innerHTML += `
+//             <div class="card-container new-card" id=${ideaBoxArray[i].id}>
+//                 <div class="card-header">
+//                     <img class="white-star-icon hidden" src="assets/star.svg">
+//                     <img class="red-star-icon" src="assets/star-active.svg">
+//                     <img class="star white-x-icon" src="assets/delete.svg">
+//                 </div>
+//                 <h2 class="card-title">${ideaBoxArray[i].title}</h2>
+//                 <p class="card-body rendered-body">${ideaBoxArray[i].body}</p>
+//                 <div class="card-footer"></div>
+//             </div>`
+//             return
+//         }
+        
+//     }
+// }
+
+
+
+
+
    
 function disableSaveButton() {
     saveButton.disabled = true;
