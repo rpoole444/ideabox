@@ -1,7 +1,7 @@
 # IDEABOX
 
-### Info:
-- We built an idea card generator that allows users to create and save new idea cards with whatever title and body text they input. Users can favorite cards by clicking the star button and then unfavorite them by clicking the red star button. 
+### Abstract:
+This app helps users generate, store and favorite ideas. Users are able to input title text and body text then save the personal idea information using the save button to save the instance in the field directly below. Users can also favorite and un-favorite their created idea cards by clicking the star button. Finally users may easily delete an idea card by clicking the 'x' in each card instance
 
 ### Installation Instructions:
 - Users should clone the repository to their local machine: git clone 
@@ -15,11 +15,13 @@
 - This project was assigned to Mod 1 students in Turing's Front-End Engineering bootcamp. Students were given 6 days to recreate a comp and add functionality to allow users to create and favorite new cards, We had about 5 days of work with about 6-8 hours a day to get the site functional. 
 
 ### Contributors:
-A team of 3 worked on this application. GitHub and Linkedin profiles below.
+This Project was created by Tristin Sorrels, Reid Poole, Winston Calhoun
 Tristin Sorrells: - https://github.com/Tristinsorrells1 || https://www.linkedin.com/in/tristinsorrells/
 Winston Calhoun - https://github.com/WinstonCalhoun || https://www.linkedin.com/in/winston-calhoun-9841bb256/
 Reid Poole - https://github.com/rpoole444 || https://www.linkedin.com/in/reid-poole-367948a8/
 
 ### Learning Goals:
-The learning goals were to properly use JavaScript, CSS, and HTML to produce a working application.  
-Building the code from the ground up and using a proper workflow for working as a group.
+- Gain an understanding of how to write clean HTML and CSS to match a provided comp
+- Understand what it looks like to have a separate data model (using a class) and DOM model
+- Incorporate & iterate over arrays in order to filter what is being displayed
+- Craft code with clean style, using small functions that show trends toward DRYness and SRP
